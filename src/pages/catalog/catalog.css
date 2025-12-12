@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+.hero-banner__tagline-item {
+  letter-spacing: 0.3em;
+  @apply text-[clamp(.875rem,1.7dvw,1.875rem)] leading-[1.2] font-light translate-y-[clamp(1.25rem,1.5dvw,2.5rem)] opacity-0 transition-all ease-[cubic-bezier(.8,0,.55,1)];
+}
+
+.filters__item {
+  @apply before:content-["/"] uppercase text-[clamp(0.75rem,1.6dvw,1.5rem)] cursor-pointer;
+}
+
+.currency {
+  font-family: "Inter", sans-serif;
+  @apply font-[270];
+}
+.new-drop-hero {
+  @apply relative w-full bg-[url('/hero.png')] bg-cover bg-no-repeat bg-center uppercase aspect-19/9;
+}
+
+.new-drop-hero::before {
+  content: "";
+  animation: opacityDec 1200ms ease-in-out forwards;
+  @apply absolute inset-0 bg-white opacity-100;
+}
+
+@keyframes opacityDec {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.join-kush__title {
+  letter-spacing: -0.11em;
+  @apply text-[clamp(3.75rem,15dvw,16.125rem)] font-bold leading-[.77];
+}
+
+.new-drop-hero__link.show {
+  @apply w-4/5 hover:w-5/6;
+}
+
+.new-drop-hero__link-text {
+  @apply translate-y-[clamp(1.25rem,1.5dvw,2.5rem)] opacity-0 duration-600 transition-all ease-[cubic-bezier(.8,0,.55,1)];
+}
+
+.show {
+  @apply translate-0 opacity-100;
+}
