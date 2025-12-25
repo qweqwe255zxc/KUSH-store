@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
-import { useProducts } from '../hooks/useProducts';
-import { formatPrice } from "../utils/utils";
+import { formatPrice } from "../utils/formatPrice.js";
 import { useEffect, useRef, useState } from "react";
 import chevronDown from '../assets/img/chevronDown.svg'
-import ScrollToTop from "./ScrollToTop.jsx";
+import ScrollToTop from "../components/common/ScrollToTop.jsx";
+import { useProducts } from "../features/product/useProducts.jsx";
 
 
 

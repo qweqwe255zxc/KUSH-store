@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, } from 'react';
-import { arrObserver } from '../../../utils/utils.js';
-import { useCategories } from '../../../hooks/useCategories.jsx';
+import { arrObserver } from '../../../utils/observers.js';
+import { useCategories } from '../../../features/categories/useCategories.jsx';
 
 const Categories = ({ selectedCategory, setSelectedCategory }) => {
 

@@ -5,13 +5,9 @@ import App from "./App.jsx";
 import Catalog from "./pages/catalog/Catalog.jsx";
 import Contact from "./pages/Contact.jsx";
 import Kushverse from "./pages/Kushverse.jsx";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Navigate,
-} from "react-router-dom";
-import { buildTitle } from "./utils/utils.js";
-import ProductPage from "./components/ProductPage.jsx";
+import { createBrowserRouter, RouterProvider, Navigate, } from "react-router-dom";
+import { buildTitle } from "./utils/buildTitle.js";
+import ProductPage from './pages/ProductPage';
 
 const router = createBrowserRouter([
   {

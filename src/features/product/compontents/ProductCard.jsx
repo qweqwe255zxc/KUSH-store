@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
-import { formatPrice, toSlug } from "../utils/utils";
+import { toSlug } from "../../../utils/toSlug";
+import { formatPrice } from "../../../utils/formatPrice";
+
 // import { useCategories } from "../hooks/useCategories";
 
 
@@ -27,3 +29,4 @@ const ProductCard = ({ product, ref, selectedCategory }) => {
 };
 
 export default ProductCard;
+

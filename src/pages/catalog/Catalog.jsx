@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react';
 import './catalog.css'
-import ProductGrid from '../../components/ProductGrid.jsx'
 import NewDropHero from './components/NewDropHero.jsx';
 import Categories from './components/Categories.jsx';
 import JoinKushHero from './components/JoinKushHero.jsx';
 // import { useProducts } from '../../hooks/useProducts';
 import { useNavigate, useParams } from 'react-router-dom';
-import { useCategories } from '../../hooks/useCategories.jsx';
-import { toSlug } from '../../utils/utils.js';
-import Promo from '../../components/Promo.jsx';
+
+import { toSlug } from '../../utils/toSlug.js';
+import Promo from '../../components/layout/Promo.jsx';
+import { useCategories } from '../../features/categories/useCategories.jsx';
+import ProductGrid from '../../features/product/compontents/ProductGrid.jsx';
 
 
 const Catalog = () => {

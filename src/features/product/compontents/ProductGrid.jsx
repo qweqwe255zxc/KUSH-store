@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { arrObserver, observer } from '../utils/utils.js';
+import { arrObserver, observer } from '../../../utils/observers.js';
 import ProductCard from './ProductCard.jsx';
-import { useProducts } from '../hooks/useProducts.jsx';
+import { useProducts } from '../useProducts';
 
 
 const ProductGrid = ({ selectedCategory }) => {
