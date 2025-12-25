@@ -11,6 +11,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import { buildTitle } from "./utils/utils.js";
+import ProductPage from "./components/ProductPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,13 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       { index: true, element: <Navigate to="catalog" replace /> },
-      { path: "catalog", element: <Catalog />, handle: { title: buildTitle('catalog') }, meta: { title: buildTitle('catalog') } },
+      {
+        path: "catalog/:category?", element: <Catalog />, handle: { title: buildTitle('catalog') }, meta: { title: buildTitle('catalog') },
+        // children: [
+        //   { path: "item/:id", element: <ProductPage />, handle: { title: buildTitle('product') }, meta: { title: buildTitle('product') } },
+        // ]
+      },
+      { path: "catalog/:category/item/:id/:brand?/:model?", element: <ProductPage />, handle: { title: buildTitle('item') }, meta: { title: buildTitle('item') } },
       { path: "kushverse", element: <Kushverse />, handle: { title: buildTitle('kushverse') }, meta: { title: buildTitle('kushverse') } },
       { path: "contact", element: <Contact />, handle: { title: buildTitle('contact') }, meta: { title: buildTitle('contact') } },
     ],
@@ -29,6 +36,7 @@ document.title
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
+
     <RouterProvider router={router} />
   </StrictMode>
 );

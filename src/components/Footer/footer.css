@@ -1,43 +1,5 @@
-@import 'tailwindcss';
-/* 
-.footer-link {
-    @apply text-[1.2rem] uppercase leading-[70%] transition-all duration-300 ease-linear group-hover:text-white;
-}
+@reference "tailwindcss";
 
-.footer-link-container {
-    @apply flex items-center justify-center rounded-[100px] border border-black transition-all duration-300 ease-linear relative overflow-hidden;
-}
-
-.footer-link-container::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 100%;
-    background-color: black;
-    width: 100%;
-    height: 100%;
-    border-radius: 100px;
-    transition: 0.3s ease;
-    z-index: -1;
-}
-
-.footer-link-container:hover::before {
-    top: 0;
-} */
-
-.loader{
-    animation: rotateLoader 2.5s cubic-bezier(.7, 0, .3, 1) infinite;
-}
-
-@keyframes rotateLoader {
-    0%{
-        transform: rotate(0);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
-}
-
-.sources{
-    @apply min-w-32.5 w-[10dvw] sm:h-21 lg:h-23 2xl:h-25 relative uppercase flex justify-between items-start;
+.sources {
+    @apply sm:h-21 lg:h-23 2xl:h-25 h-[clamp(5.25rem,6dvw,6.25rem)] w-[clamp(10rem,10dvw,15rem)] relative uppercase flex justify-between items-start;
 }

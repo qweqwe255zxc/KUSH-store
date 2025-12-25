@@ -1,50 +1,53 @@
-@import "tailwindcss";
+@reference "tailwindcss";
 
 .hero-banner__tagline-item {
-  letter-spacing: 0.3em;
-  @apply text-[clamp(.875rem,1.7dvw,1.875rem)] leading-[1.2] font-light translate-y-[clamp(1.25rem,1.5dvw,2.5rem)] opacity-0 transition-all ease-[cubic-bezier(.8,0,.55,1)];
+    letter-spacing: 0.3em;
+    @apply text-[clamp(.875rem,1.7dvw,1.875rem)] leading-[1.2] font-light ease-[cubic-bezier(.8,0,.55,1)];
 }
 
 .filters__item {
-  @apply before:content-["/"] uppercase text-[clamp(0.75rem,1.6dvw,1.5rem)] cursor-pointer;
+    @apply before:content-["/"] uppercase text-[clamp(0.75rem,1.6dvw,1.5rem)] cursor-pointer;
+}
+.arrow {
+    @apply h-[clamp(.75rem,3dvw,3.75rem)] duration-500;
 }
 
-.currency {
-  font-family: "Inter", sans-serif;
-  @apply font-[270];
-}
 .new-drop-hero {
-  @apply relative w-full bg-[url('/hero.png')] bg-cover bg-no-repeat bg-center uppercase aspect-19/9;
+    @apply relative w-full bg-[url('/hero.png')] bg-cover bg-no-repeat bg-center uppercase aspect-19/9;
 }
 
 .new-drop-hero::before {
-  content: "";
-  animation: opacityDec 1200ms ease-in-out forwards;
-  @apply absolute inset-0 bg-white opacity-100;
+    content: "";
+    animation: opacityDec 1200ms ease-in-out forwards;
+    @apply absolute inset-0 bg-white opacity-100;
 }
 
 @keyframes opacityDec {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 .join-kush__title {
-  letter-spacing: -0.11em;
-  @apply text-[clamp(3.75rem,15dvw,16.125rem)] font-bold leading-[.77];
+    letter-spacing: -0.11em;
+    @apply text-[clamp(3.75rem,15dvw,16.125rem)] font-bold leading-[.77];
 }
 
-.new-drop-hero__link.show {
-  @apply w-4/5 hover:w-5/6;
+.new-drop-hero__link {
+    @apply absolute top-0 left-0 flex m-3 justify-between items-center w-2/4 ease-in-out duration-1200 border-t-3 md:border-t-2 sm:border-t border-t-white rounded-b-xl h-fit hover:backdrop-blur-xs;
+}
+
+.join-kush__link {
+    @apply absolute bottom-0 left-0 flex m-3 justify-between items-center w-2/5 hover:w-3/6 ease-in-out duration-1200  rounded-t-xl h-fit text-black;
+}
+
+.new-drop-hero__link.fade-in-show {
+    @apply w-4/5 hover:w-5/6;
 }
 
 .new-drop-hero__link-text {
-  @apply translate-y-[clamp(1.25rem,1.5dvw,2.5rem)] opacity-0 duration-600 transition-all ease-[cubic-bezier(.8,0,.55,1)];
-}
-
-.show {
-  @apply translate-0 opacity-100;
+    @apply text-[clamp(1.25rem,4dvw,4.5rem)] leading-none font-semibold text-white;
 }

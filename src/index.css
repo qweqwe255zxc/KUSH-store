@@ -1,2 +1,135 @@
 @import "tailwindcss";
 
+:root {
+    --delay: 0.75s;
+    --def-ease: cubic-bezier(0.8, 0, 0.55, 1);
+}
+
+@layer base {
+    * {
+        @apply box-border tracking-[-0.08em] m-0 p-0;
+        /* outline: 1px solid #898989; */
+    }
+    html {
+        @apply scroll-smooth;
+        font-family: "Open Sans", sans-serif;
+    }
+    header {
+        @apply grid grid-cols-3 p-3 fixed top-0 left-0 w-full z-1000 bg-[rgb(255,255,255,.5)] backdrop-grayscale-100 animate-[opacityInc_0.8s_forwards];
+    }
+
+    a {
+        @apply no-underline text-black;
+    }
+    /* div {
+        outline: 1px solid red;
+    }
+    button {
+        outline: 1px solid blue;
+    } */
+}
+
+@layer themes {
+    .theme-light {
+        --bg-color: #ffffff;
+        --text-color: #000000;
+        --accent-color: #ff5733;
+    }
+
+    .theme-dark {
+        --bg-color: #121212;
+        --text-color: #ffffff;
+        --accent-color: #ff5733;
+    }
+}
+
+@layer components {
+    .review-card {
+        @apply absolute border-gray-500 rounded-2xl border bg-white  z-10 w-[clamp(10rem,20dvw,18rem)] aspect-square bg-contain bg-center bg-no-repeat;
+    }
+    .loader {
+        animation: rotateLoader 3s cubic-bezier(0.7, 0, 0.3, 1) infinite;
+    }
+    @keyframes rotateLoader {
+        0% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(720deg);
+        }
+    }
+
+    .promo {
+        @apply flex font-bold text-[clamp(2rem,14dvw,20rem)] tracking-[-0.11em];
+    }
+    .location {
+        @apply animate-[opacityInc_0.8s_forwards] text-[clamp(.75rem,1.4dvw,1rem)] flex justify-center items-center before:content-["["] before:mr-[2dvw] after:content-["]"] after:ml-[2dvw] opacity-100;
+    }
+
+    .location::before,
+    .location::after {
+        @apply animate-[beforeAfterAnim_1s_forwards];
+    }
+
+    @keyframes beforeAfterAnim {
+        0% {
+            margin: 0;
+        }
+
+        100% {
+            margin: 0 2dvw;
+        }
+    }
+
+    @keyframes opacityInc {
+        0% {
+            opacity: 0;
+        }
+
+        20% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .currency {
+        font-family: "Inter", sans-serif !important;
+    }
+}
+
+@layer utilities {
+    .fade-in-lg {
+        @apply translate-y-[clamp(1.875rem,3dvw,5rem)] opacity-0 duration-700 transition-all ease-(--def-ease);
+    }
+    .fade-in-md {
+        @apply translate-y-[clamp(1.25rem,1.5dvw,2.5rem)] opacity-0 duration-700 transition-all ease-(--def-ease);
+    }
+    .rev-fade-in-md {
+        @apply -translate-y-[clamp(1.25rem,1.5dvw,2.5rem)] opacity-0 duration-700 transition-all ease-(--def-ease);
+    }
+    .fade-in-sm {
+        @apply translate-y-[clamp(.625rem,.75dvw,1.25rem)] opacity-0 duration-700 transition-all ease-(--def-ease);
+    }
+    .fade-in-show {
+        @apply translate-0 opacity-100;
+    }
+
+    .text-clamp-small {
+        font-size: clamp(0.75rem, 1.3dvw, 1rem);
+    }
+    .text-clamp-base {
+        font-size: clamp(1rem, 1.7dvw, 1.25rem);
+    }
+    .text-clamp-large {
+        font-size: clamp(1.25rem, 4dvw, 4.5rem);
+    }
+    .text-clamp-xl {
+        font-size: clamp(2rem, 14dvw, 20rem);
+    }
+    .text-clamp-2xl {
+        font-size: clamp(3.75rem, 15dvw, 16.125rem);
+    }
+}
