@@ -7,7 +7,7 @@ import Contact from "./pages/Contact.jsx";
 import Kushverse from "./pages/Kushverse.jsx";
 import { createBrowserRouter, RouterProvider, Navigate, } from "react-router-dom";
 import { buildTitle } from "./utils/buildTitle.js";
-import ProductPage from './pages/ProductPage';
+import ProductPage from './pages/productPage/ProductPage.jsx';
 
 const router = createBrowserRouter([
   {
