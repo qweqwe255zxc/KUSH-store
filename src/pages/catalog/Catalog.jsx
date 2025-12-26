@@ -7,7 +7,7 @@ import JoinKushHero from './components/JoinKushHero.jsx';
 import { useNavigate, useParams } from 'react-router-dom';
 
 import { toSlug } from '../../utils/toSlug.js';
-import Promo from '../../components/layout/Promo.jsx';
+import Promo from '../../components/layout/Promo.js';
 import { useCategories } from '../../features/categories/useCategories.jsx';
 import ProductGrid from '../../features/product/compontents/ProductGrid.jsx';
 

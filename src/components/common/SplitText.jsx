@@ -1,14 +1,14 @@
-// import { forwardRef } from "react"
+// import { forwardrefArr } from "react"
 
-// const SplitText = forwardRef(({ word, classes, style = {} }, ref) => {
+// const SplitText = forwardrefArr(({ word, classes, style = {} }, refArr) => {
 //     const chars = word.split('')
 
 //     return (
 //         <div className='flex'>
 //             {chars.map((char, i) => (
-//                 <div key={i} className={classes} style={style} ref={(el) => {
-//                     if (ref && ref.current && el && !ref.current.includes(el)) {
-//                         ref.current.push(el)
+//                 <div key={i} className={classes} style={style} refArr={(el) => {
+//                     if (refArr && refArr.current && el && !refArr.current.includes(el)) {
+//                         refArr.current.push(el)
 //                     }
 //                 }}>{char === ' ' ? '\u00A0' : char}</div>
 //             ))}
@@ -18,15 +18,15 @@
 
 // export default SplitText
 
-const SplitText = ({ word = '', classes, style = {}, ref }) => {
+const SplitText = ({ word = '', classes, style = {}, refArr }) => {
     const chars = word.split('')
 
     return (
         <div className='flex'>
             {chars.map((char, i) => (
                 <div key={i} className={classes} style={style} ref={(el) => {
-                    if (ref && ref.current && el && !ref.current.includes(el)) {
-                        ref.current.push(el)
+                    if (refArr && refArr.current && el && !refArr.current.includes(el)) {
+                        refArr.current.push(el)
                     }
                 }}>{char === ' ' ? '\u00A0' : char}</div>
             ))}

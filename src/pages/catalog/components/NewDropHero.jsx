@@ -41,7 +41,7 @@ const NewDropHero = () => {
         <a onClick={() => handleClick()} className="cursor-pointer new-drop-hero flex" alt='new drop' ref={containerRef}>
             <div className='new-drop-hero__link' ref={linkToDropRef}>
                 <h2>
-                    <SplitText word={'Discrover The Drop'} classes={'new-drop-hero__link-text fade-in-md'} ref={ctaRef} />
+                    <SplitText word={'Discrover The Drop'} classes={'new-drop-hero__link-text fade-in-md'} refArr={ctaRef} />
                 </h2>
                 <svg ref={arrowRef} className='arrow fade-in-md' viewBox="0 0 97 88" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="88" height="8" transform="translate(0 40.0322)" fill="white" />
@@ -51,9 +51,9 @@ const NewDropHero = () => {
             </div>
             <div ref={taglineRef} className='absolute flex flex-col items-end bottom-0 right-0 text-white m-3'>
                 {/* {SplitText('New Era', 'hero-banner__tagline-item fade-in-sm duration-600', newEraRef)} */}
-                <SplitText word={'New Era'} classes={'hero-banner__tagline-item fade-in-sm duration-600'} ref={newEraRef} />
-                <SplitText word={'Same Energy'} classes={'hero-banner__tagline-item fade-in-sm duration-600'} ref={sameEnergyRef} />
-                <SplitText word={'Different Dimension'} classes={'hero-banner__tagline-item fade-in-sm duration-600'} ref={diffDimensionRef} />
+                <SplitText word={'New Era'} classes={'hero-banner__tagline-item fade-in-sm duration-600'} refArr={newEraRef} />
+                <SplitText word={'Same Energy'} classes={'hero-banner__tagline-item fade-in-sm duration-600'} refArr={sameEnergyRef} />
+                <SplitText word={'Different Dimension'} classes={'hero-banner__tagline-item fade-in-sm duration-600'} refArr={diffDimensionRef} />
             </div>
         </a>
     );

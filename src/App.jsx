@@ -7,7 +7,8 @@ import { useEffect } from 'react'
 import { ProductsProvider } from './features/product/ProductsContext.jsx'
 import { CategoriesProvider } from './features/categories/CategoriesContext.jsx'
 import ScrollToTop from './components/common/ScrollToTop.jsx'
-import Footer from './components/Layout/Footer/Footer.jsx'
+import Footer from './components/layout/footer/Footer.jsx'
+
 
 function App() {
 
