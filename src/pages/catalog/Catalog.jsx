@@ -3,13 +3,11 @@ import './catalog.css'
 import NewDropHero from './components/NewDropHero.jsx';
 import Categories from './components/Categories.jsx';
 import JoinKushHero from './components/JoinKushHero.jsx';
-// import { useProducts } from '../../hooks/useProducts';
 import { useNavigate, useParams } from 'react-router-dom';
-
 import { toSlug } from '../../utils/toSlug.js';
-import Promo from '../../components/layout/Promo.js';
 import { useCategories } from '../../features/categories/useCategories.jsx';
 import ProductGrid from '../../features/product/compontents/ProductGrid.jsx';
+import Promo from '../../components/layout/Promo';
 
 
 const Catalog = () => {
@@ -46,7 +44,7 @@ const Catalog = () => {
     return (
         <>
             <Promo />
-            <NewDropHero  />
+            <NewDropHero />
             <Categories selectedCategory={selectedCategory} setSelectedCategory={handleCategoryClick} />
             <ProductGrid key={selectedCategory} selectedCategory={selectedCategory} />
             <JoinKushHero />
