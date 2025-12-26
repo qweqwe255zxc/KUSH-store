@@ -26,7 +26,7 @@ const Promo = () => {
   }, []);
 
   return (
-    <div className='flex items-center justify-between p-5 ' ref={container}>  {/* grid grid-cols-[2fr_1fr_2fr] my-[clamp(1.875rem,3dvw,5rem)] */}
+    <div className='flex items-center justify-between p-5' ref={container}>  {/* grid grid-cols-[2fr_1fr_2fr] my-[clamp(1.875rem,3dvw,5rem)] */}
       <SplitText word={'Studio'} classes={'promo justify-start fade-in-lg'} ref={studioWordRef} />
       <span className='location text-[clamp(0.75rem,1.3dvw,1rem)]' >{middletext}</span>
       <div className='mr-[1.3dvw]'>
