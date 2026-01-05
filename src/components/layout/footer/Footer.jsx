@@ -18,17 +18,17 @@ const Footer = () => {
                 <div className='sources'>
                     <h2 className='text-[clamp(.875rem,1.6dvw,1.5rem)] font-semibold before:content-["/"] top-0 left-0'>nav</h2>
                     <div className='flex flex-col self-end'>
-                        <Link to='/catalog' className='text-[clamp(.75rem,1.4dvw,1.25rem)]'>catalog</Link>
-                        <Link to='/kushverse' className='text-[clamp(.75rem,1.44vw,1.25rem)]'>kushvrse</Link>
-                        <Link to='/contacts' className='text-[clamp(.75rem,1.4dvw,1.25rem)]'>contacts</Link>
+                        <Link to='/catalog' className='text-[clamp(.75rem,1.4dvw,1.125rem)]'>catalog</Link>
+                        <Link to='/kushverse' className='text-[clamp(.75rem,1.4dvw,1.125rem)]'>kushvrse</Link>
+                        <Link to='/contacts' className='text-[clamp(.75rem,1.4dvw,1.125rem)]'>contacts</Link>
                     </div>
                 </div>
                 <div className='sources'>
-                    <h2 className='text-[clamp(.875rem,1.6dvw,1.5rem)] font-semibold before:content-["/"] uppercase '>other</h2>
+                    <h2 className='text-[clamp(.875rem,1.6dvw,1.5rem)] font-semibold before:content-["/"]'>other</h2>
                     <div className='flex flex-col self-end'>
-                        <a href="" className='text-[clamp(.75rem,1.4dvw,1.25rem)] '>faq</a>
-                        <a href="" className='text-[clamp(.75rem,1.4dvw,1.25rem)] '>sizes</a>
-                        <a href="" className='text-[clamp(.75rem,1.4dvw,1.25rem)] '>delivery</a>
+                        <a href="" className='text-[clamp(.75rem,1.4dvw,1.125rem)]'>faq</a>
+                        <a href="" className='text-[clamp(.75rem,1.4dvw,1.125rem)]'>sizes</a>
+                        <a href="" className='text-[clamp(.75rem,1.4dvw,1.125rem)]'>delivery</a>
                     </div>
                 </div>
             </div>

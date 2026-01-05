@@ -1,9 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
-// import chevronDown from '../../assets/img/chevronDown.svg'
 import ScrollToTop from "../../components/common/ScrollToTop.jsx";
 import { useProducts } from "../../features/product/useProducts.jsx";
-// import { formatPrice } from "../../utils/formatPrice.js";
 import ImageGalary from './components/ImageGalary';
 import GalleryThumbnails from "./components/GalleryThumbnails.jsx";
 import ProductInfo from "./components/ProductInfo.jsx";

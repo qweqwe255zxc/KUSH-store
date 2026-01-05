@@ -3,11 +3,12 @@ import './App.css'
 import { Outlet, useMatches } from 'react-router-dom'
 import Header from './components/layout/Header.jsx'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { ProductsProvider } from './features/product/ProductsContext.jsx'
 import { CategoriesProvider } from './features/categories/CategoriesContext.jsx'
 import ScrollToTop from './components/common/ScrollToTop.jsx'
 import Footer from './components/layout/footer/Footer.jsx'
+import AuthModal from './components/auth/AuthModal.jsx';
 
 
 function App() {
@@ -21,11 +22,15 @@ function App() {
     }
   }, [matches]);
 
+  const [isOpen, setIsOpen] = useState(false);
+
+
   return (
     <div className="min-h-screen grid grid-rows-[auto_1fr_auto]">
-      <Header />
+      <Header setIsOpen={setIsOpen} />
       <ProductsProvider>
         <CategoriesProvider>
+          <AuthModal isOpen={isOpen} setIsOpen={setIsOpen} />
           <ScrollToTop />
           <Outlet />
         </CategoriesProvider>

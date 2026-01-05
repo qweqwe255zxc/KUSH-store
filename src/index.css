@@ -7,24 +7,31 @@
 
 @layer base {
     * {
-        @apply box-border tracking-[-0.08em] m-0 p-0;
+        @apply box-border tracking-[-0.08em] m-0 p-0 focus:outline-none focus:ring-1 focus:ring-black;
 
         /* outline: 1px solid #898989; */
     }
     *::selection {
         @apply bg-[#acacac7a];
     }
+
     html {
-        @apply scroll-smooth;
+        @apply scroll-smooth ;
         font-family: "Open Sans", sans-serif;
+        scrollbar-gutter: stable;
     }
     header {
-        @apply grid grid-cols-3 p-3 fixed top-0 left-0 w-full z-1000 bg-[rgb(255,255,255,.5)] backdrop-grayscale-100 animate-[opacityInc_0.8s_forwards];
+        @apply grid grid-cols-3 p-3 fixed top-0 left-0 w-full z-100 bg-[rgb(255,255,255,.5)] backdrop-grayscale-100 animate-[opacityInc_0.8s_forwards];
     }
 
     a {
         @apply no-underline text-black;
     }
+    /* input,
+    form button {
+        @apply placeholder:uppercase placeholder:font-light w-full h-6.25 pl-2 bg-[#EFEFEF];
+    } */
+
     /* div {
         outline: 1px solid red;
     }
@@ -135,5 +142,9 @@
     }
     .text-clamp-2xl {
         font-size: clamp(3.75rem, 15dvw, 16.125rem);
+    }
+
+    .form-controls {
+        @apply rounded-xs placeholder:uppercase placeholder:font-light w-full h-6.25 px-2 transition-all duration-300 flex items-center justify-center gap-1;
     }
 }

@@ -13,7 +13,7 @@ const ProductCard = ({ product, ref, selectedCategory }) => {
     // const curCategory = categories.find(cat => cat.id === product.category)
 
     return (
-        <Link to={`/catalog/${toSlug(selectedCategory.value)}/item/${product.id}/${toSlug(product.brand)}/${toSlug(product.model)}`} ref={(el) => {
+        <Link to={`/catalog/${toSlug(selectedCategory.name)}/item/${product.id}/${toSlug(product.brand)}/${toSlug(product.model)}`} ref={(el) => {
             if (ref && ref.current && el && !ref.current.includes(el)) {
                 ref.current.push(el)
             }

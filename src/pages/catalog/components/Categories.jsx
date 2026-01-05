@@ -21,7 +21,7 @@ const Categories = ({ selectedCategory, setSelectedCategory }) => {
                             filtersRef.current.push(el)
                         }
                     }} className={`filters__item  ${selectedCategory === category ? 'font-bold' : ''}`}
-                        onClick={() => { setSelectedCategory(category) }} >{category.value}</span>
+                        onClick={() => { setSelectedCategory(category) }} >{category.name}</span>
                 )
             })}
             <span ref={(el) => {

@@ -6,34 +6,42 @@ import { useProducts } from '../useProducts';
 
 const ProductGrid = ({ selectedCategory }) => {
 
+    const container = useRef(null)
+    const productsRef = useRef([])
+
     const itemsPerPage = 20;
     const [currPage, setCurrPage] = useState(1);
     const [hoverPage, setHoverPage] = useState(null);
     const { products } = useProducts()
+
+    useEffect(() => {
+        if (!container.current || productsRef.current.length === 0) return;
+
+        observer(container.current, container.current, .2, 0)
+        arrObserver(container.current, productsRef.current, .2, 0, 50, true)
+    }, [products]);
+
+    if (!selectedCategory || !products || products.length === 0) {
+        return null;
+    }
 
 
     const startIndex = (currPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
 
 
+
     const filteredProducts =
         selectedCategory.id === 2
-            ? products.filter((product) => product.newDrop === true)
+            ? products.filter((product) => product.newDrop === 1)
             : selectedCategory.id === 1
                 ? products
-                : products.filter((product) => product.category === selectedCategory.id);
+                : products.filter((product) => product.category_id === selectedCategory.id);
     const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
 
     const currentProducts = filteredProducts.slice(startIndex, endIndex);
     const pages = Array.from({ length: totalPages }, (_, i) => i + 1)
 
-    const container = useRef(null)
-    const productsRef = useRef([])
-
-    useEffect(() => {
-        observer(container.current, container.current, .2, 0)
-        arrObserver(container.current, productsRef.current, .2, 0, 50, true)
-    }, []);
 
     return (
         <>
